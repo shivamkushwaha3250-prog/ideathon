@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-900 text-white font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-indigo-500/30 text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500;
+  }
+
+  .glow-border {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15), 0 0 45px rgba(99, 102, 241, 0.05);
+  }
+
+  .glow-border-strong {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.25), 0 0 60px rgba(99, 102, 241, 0.1);
+  }
+
+  .card-glow {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-glow-hover {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 25px 50px -10px rgba(99, 102, 241, 0.15);
+  }
+}
